@@ -11,7 +11,7 @@ require_once 'dropbox.class.php';
 $dropb = new dropbox_neatek_class('HERE_IS_YOUR_TOKEN');
 ```
 
-### Example:
+### Example (share files in folder):
 
  ```php
  $params = array(
@@ -28,7 +28,7 @@ foreach ($dropb->get_entries() as $key => $value) {
 }
 ```
 
-### Share file ( or just use heavy_share_path($path) )
+### Share file (as well as above, but more code) 
 ```php
 $data = $dropb->request('files', 'list_folder/continue', $params);
 foreach ($dropb->get_entries() as $key => $value) {
