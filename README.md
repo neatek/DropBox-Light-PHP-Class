@@ -1,12 +1,11 @@
-# dropbox-light-php-class
-# Install:
+# Dropbox SDK Easy to use
 
 ```
 require_once 'dropbox.class.php';
 $dropb = new dropbox_neatek_class('HERE_IS_YOUR_TOKEN');
 ```
 
-# Example:
+### Example:
 
  ```
  $params = array(
@@ -23,7 +22,7 @@ foreach ($dropb->get_entries() as $key => $value) {
 }
 ```
 
-# Share file ( or just use heavy_share_path($path) )
+### Share file ( or just use heavy_share_path($path) )
 ```
 $data = $dropb->request('files', 'list_folder/continue', $params);
 foreach ($dropb->get_entries() as $key => $value) {
