@@ -1,13 +1,19 @@
 # Dropbox SDK Easy to use
 
-```
+* Get any of [DropBox API](https://www.dropbox.com/developers/documentation/http/documentation) requests by $class->request('file','..',$params);
+* Working with entries.
+* Share folder or file.
+* Get lastest changes in Dropbox.
+* And many more.
+
+```php
 require_once 'dropbox.class.php';
 $dropb = new dropbox_neatek_class('HERE_IS_YOUR_TOKEN');
 ```
 
 ### Example:
 
- ```
+ ```php
  $params = array(
 	'cursor'=> $cursor, // you can get cursor - get_lastest_cursor($folder = '', $params = array())
 	'sdk_dp_save'=>true
@@ -23,7 +29,7 @@ foreach ($dropb->get_entries() as $key => $value) {
 ```
 
 ### Share file ( or just use heavy_share_path($path) )
-```
+```php
 $data = $dropb->request('files', 'list_folder/continue', $params);
 foreach ($dropb->get_entries() as $key => $value) {
 	
