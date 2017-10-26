@@ -9,6 +9,10 @@ $dropb = new dropbox_neatek_class('HERE_IS_YOUR_TOKEN');
 # Example:
 
  ```
+ $params = array(
+	'cursor'=> $cursor, // you can get cursor - get_lastest_cursor($folder = '', $params = array())
+	'sdk_dp_save'=>true
+);
 $data = $dropb->request('files', 'list_folder/continue', $params);
 foreach ($dropb->get_entries() as $key => $value) {
 	$dropb->entry($key);
